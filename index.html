@@ -40,7 +40,7 @@
     <div class="held-text">
       <p class="marke-zeile"><span class="punkt"></span> Jetzt im Test auf Android</p>
       <h1>Deine Rezepte.<br><span class="akzent">Einfach gekocht.</span></h1>
-      <p class="einleitung">Fotografiere eine Kochbuchseite oder teile einen Link – Olino macht daraus ein sauberes Rezept mit Zutaten, Schritten und Nährwerten. Dann planen, einkaufen und Schritt für Schritt kochen.</p>
+      <p class="einleitung">Fotografiere eine Kochbuchseite oder teile einen Link – Olino macht daraus ein sauberes Rezept mit Zutaten, Schritten und Nährwerten. Dann planen, einkaufen und kochen – auch ein ganzes Menü auf einmal.</p>
       <div class="knoepfe">
         <a href="#mitmachen" class="knopf">Als Tester mitmachen</a>
         <a href="#funktionen" class="knopf knopf-hell">Mehr erfahren</a>
@@ -50,6 +50,11 @@
         <li>Kein Tracking</li>
         <li>Kein Konto nötig</li>
       </ul>
+      <a href="#zusammen" class="hinweis-karte">
+        <span class="hinweis-marke">Das Besondere</span>
+        <span>Mehrere Gerichte, ein Plan – <b>alles gleichzeitig auf dem Tisch</b></span>
+        <span class="hinweis-pfeil" aria-hidden="true">→</span>
+      </a>
     </div>
     <div class="held-bild">
       <div class="handy handy-gross">
@@ -121,21 +126,55 @@
 </section>
 
 <!-- Zusammen kochen -->
-<section id="zusammen" class="abschnitt">
-  <div class="rahmen zeige zeige-gedreht">
-    <div class="zeige-bild erscheint">
-      <div class="handy"><img src="bilder/app-03.jpg" alt="Gemeinsamer Ablauf für zwei Gerichte mit Zeitleiste und Geräten" width="550" height="1100" loading="lazy"></div>
+<section id="zusammen" class="abschnitt menue-abschnitt">
+  <div class="rahmen">
+    <div class="menue-kopf erscheint">
+      <p class="ueber">Das Besondere an CookOlino</p>
+      <h2>Ein ganzes Menü kochen – und alles ist gleichzeitig fertig</h2>
+      <p>Hauptgang, Beilage und Gemüse, oder Vorspeise und Dessert: Wer mehrere Gerichte kocht, kennt das Chaos. Das eine ist kalt, das andere noch nicht gar, und der Ofen ist doppelt belegt. Olino nimmt dir die Planung ab.</p>
     </div>
-    <div class="zeige-text erscheint">
-      <p class="ueber">Das Besondere</p>
-      <h2>Zwei Gerichte, ein Plan, alles gleichzeitig fertig</h2>
-      <p>Wähle zwei oder drei Gerichte – Olino plant einen gemeinsamen Ablauf. Wartezeiten werden genutzt, gleiche Arbeiten zusammengelegt, Ofen und Kochfelder ohne Konflikte eingeplant.</p>
-      <ul class="haken">
-        <li>Zeitleiste mit allen Schritten</li>
-        <li>«Essen um …» berechnet die Startzeit</li>
-        <li>Timer mit Namen wie «Kartoffeln vorkochen»</li>
-      </ul>
+
+    <ol class="schritte">
+      <li class="erscheint">
+        <span class="nummer">1</span>
+        <h3>Gerichte wählen</h3>
+        <p>Tippe zwei oder drei Rezepte an, die zusammen auf den Tisch sollen.</p>
+      </li>
+      <li class="erscheint">
+        <span class="nummer">2</span>
+        <h3>Olino plant den Ablauf</h3>
+        <p>Alle Schritte werden zu einem einzigen Ablauf zusammengeführt – passend zu deinem Ofen und deinen Kochfeldern.</p>
+      </li>
+      <li class="erscheint">
+        <span class="nummer">3</span>
+        <h3>Kochen und geniessen</h3>
+        <p>Schritt für Schritt kochen. Am Ende ist alles gleichzeitig fertig und heiss.</p>
+      </li>
+    </ol>
+
+    <div class="zeige zeige-gedreht menue-zeige">
+      <div class="zeige-bild erscheint">
+        <div class="handy"><img src="bilder/app-03.jpg" alt="Gemeinsamer Ablauf für zwei Gerichte mit Zeitleiste und Geräten" width="550" height="1100" loading="lazy"></div>
+      </div>
+      <div class="zeige-text erscheint">
+        <h3 class="menue-titel">So optimiert Olino dein Menü</h3>
+        <ul class="vorzuege">
+          <li><b>Wartezeiten nutzen</b><span>Während die Kartoffeln kochen, rüstest du schon das Gemüse für das zweite Gericht.</span></li>
+          <li><b>Arbeiten zusammenlegen</b><span>Zwiebeln für beide Gerichte schneidest du in einem Durchgang.</span></li>
+          <li><b>Ofen und Herd clever einteilen</b><span>Olino weiss, was gleichzeitig in den Ofen passt, und verteilt die Töpfe auf die Kochfelder.</span></li>
+          <li><b>«Essen um 19 Uhr»</b><span>Gib die Essenszeit an – Olino sagt dir, wann du anfangen musst.</span></li>
+          <li><b>Timer mit Namen</b><span>«Kartoffeln vorkochen» oder «Taler wenden»: So behältst du bei mehreren Timern den Überblick.</span></li>
+        </ul>
+      </div>
     </div>
+
+    <figure class="zeitleiste erscheint" aria-label="Beispiel: Ablauf für zwei Gerichte">
+      <figcaption>Beispiel: Hüttenkäsetaler und Ofenkartoffeln in 47 Minuten</figcaption>
+      <div class="spur"><span class="spur-name">Ofen</span><div class="spur-bahn"><span class="balken balken-ab" style="left:0;width:12%" title="vorheizen">🔥</span><span class="balken balken-ab" style="left:38%;width:62%" title="beide Bleche zusammen backen">beide Bleche backen</span></div></div>
+      <div class="spur"><span class="spur-name">Kochfeld 1</span><div class="spur-bahn"><span class="balken balken-b" style="left:2%;width:34%" title="Kartoffeln vorkochen">Kartoffeln</span></div></div>
+      <div class="spur"><span class="spur-name">Du</span><div class="spur-bahn"><span class="balken balken-ab" style="left:12%;width:24%" title="Gemüse rüsten, Masse anrühren">rüsten</span><span class="balken balken-b" style="left:40%;width:22%" title="Joghurt-Topping">Topping</span><span class="balken balken-ab" style="left:88%;width:12%" title="anrichten">🍽</span></div></div>
+      <div class="legende"><span><i class="farbe-a"></i>Hüttenkäsetaler</span><span><i class="farbe-b"></i>Ofenkartoffeln</span><span><i class="farbe-ab"></i>beide</span></div>
+    </figure>
   </div>
 </section>
 
