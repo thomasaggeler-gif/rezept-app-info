@@ -164,18 +164,31 @@ details p { color: var(--text-leise); margin: 0 0 18px; }
 .vorzuege b { display: block; }
 .vorzuege span { color: var(--text-leise); }
 
-/* Zeitleiste */
-.zeitleiste { margin: 0; background: var(--karte); border: 1px solid var(--linie); border-radius: var(--rund); padding: 28px; box-shadow: var(--schatten); }
-.zeitleiste figcaption { font-weight: 700; margin-bottom: 20px; }
-.spur { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 12px; margin-bottom: 10px; }
-.spur-name { font-size: .9rem; color: var(--text-leise); font-weight: 600; }
-.spur-bahn { position: relative; height: 38px; background: var(--petrol-hell); border-radius: 10px; }
-.balken { position: absolute; top: 4px; bottom: 4px; border-radius: 7px; color: #fff; font-size: .78rem; font-weight: 600; display: flex; align-items: center; padding: 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.balken-a, .farbe-a { background: #E07B39; }
-.balken-b, .farbe-b { background: #2E8B57; }
-.balken-ab, .farbe-ab { background: var(--petrol); }
-.legende { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; font-size: .9rem; color: var(--text-leise); }
-.legende i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+/* Ablauf wie in der App */
+.ablauf { margin: 0 auto; max-width: 720px; background: var(--karte); border: 1px solid var(--linie); border-radius: var(--rund); padding: 28px; box-shadow: var(--schatten); }
+.ablauf figcaption { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--koralle); margin-bottom: 16px; }
+.ablauf-gerichte { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.gericht { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; font-size: .92rem; font-weight: 500; }
+.gericht-t { background: #FBE3D2; color: #7A3A10; }
+.gericht-k { background: #D9F0E2; color: #1C5A35; }
+.p { width: 11px; height: 11px; border-radius: 50%; display: inline-block; flex: none; }
+.p.t { background: #E8762B; }
+.p.k { background: #2F9E5B; }
+.ablauf-info { color: var(--text-leise); margin: 0 0 14px; font-size: .95rem; }
+.ablauf-essen { display: flex; align-items: center; gap: 10px; background: var(--petrol-hell); color: var(--petrol-dunkel); padding: 10px 14px; border-radius: 12px; margin: 0 0 20px; }
+.ablauf svg { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.ablauf-liste { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.ablauf-liste li { display: grid; grid-template-columns: 76px minmax(0, 1fr); background: #fff; border: 1px solid var(--linie); border-radius: 14px; overflow: hidden; }
+.ablauf-zeit { padding: 12px; font-size: .82rem; color: var(--text-leise); line-height: 1.35; }
+.ablauf-zeit b { display: block; font-size: 1rem; color: var(--text); }
+.ablauf-text { padding: 12px 14px 12px 4px; display: flex; flex-direction: column; gap: 2px; }
+.ablauf-punkte { display: flex; gap: 5px; margin-bottom: 4px; }
+.ablauf-neben { font-size: .85rem; color: var(--text-leise); }
+.ablauf-liste li.jetzt { background: #EFE6FB; border-color: #E3D6F7; }
+.ablauf-liste li.jetzt .ablauf-neben { color: var(--koralle); }
+.ablauf-liste li.fertig { background: var(--koralle); border-color: var(--koralle); color: #fff; }
+.ablauf-liste li.fertig .ablauf-zeit, .ablauf-liste li.fertig .ablauf-zeit b { color: #fff; }
+.ablauf-liste li.fertig .ablauf-text { flex-direction: row; align-items: center; gap: 10px; }
 
 /* Bewegung */
 .erscheint { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
@@ -208,7 +221,5 @@ details p { color: var(--text-leise); margin: 0 0 18px; }
   .karten { grid-template-columns: 1fr; }
   .olino-schwebt { width: 84px; border-radius: 20px; }
   .fuss p { margin: 0; }
-  .spur { grid-template-columns: 1fr; gap: 4px; }
-  .balken { font-size: .7rem; padding: 0 5px; }
-  .zeitleiste { padding: 20px; }
+  .ablauf { padding: 20px; }
 }
