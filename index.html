@@ -1,13 +1,232 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CookOlino</title>
-<style>body{font-family:-apple-system,Helvetica,Arial,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.5;color:#222}</style>
-</head><body>
-<img src="titel.png" alt="CookOlino – Olino, dein kleiner Koch" style="width:100%;height:auto;border-radius:16px;margin-bottom:8px">
-<h1>CookOlino</h1>
-<p>Android-App für die eigene Rezeptsammlung. Rezeptfotos, Webseiten oder eigene Eingaben werden mit Claude (Anthropic) zu sauberen Rezepten aufbereitet. Die Rezepte liegen auf dem Handy und werden auf Wunsch im eigenen Google Drive (Ordner «Cookolino») oder in einem selbst gewählten Ordner gesichert. Zutaten lassen sich in die eigene Bring!-Einkaufsliste übertragen, Rezepte als Datei an andere senden.</p>
-<p>Eingelesene Rezepte und Bilder sind für den privaten Gebrauch bestimmt; die Rechte bleiben bei den Urheberinnen und Urhebern.</p>
-<p>CookOlino wird derzeit nur in einem geschlossenen Test über Google Play verteilt.</p>
-<p><a href="datenschutz.html">Datenschutzerklärung</a></p>
-<p style="color:#666;font-size:0.9em;margin-top:2em">© 2026 Thomas Aggeler · CookOlino</p>
-</body></html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CookOlino – Rezepte fotografieren, planen und kochen</title>
+<meta name="description" content="CookOlino macht aus Kochbuchseiten, Webseiten und eigenen Notizen deine Rezeptsammlung auf dem Handy. Planen, einkaufen und Schritt für Schritt kochen – ohne Werbung, ohne Tracking.">
+<meta name="theme-color" content="#1F5F66">
+<meta property="og:title" content="CookOlino – Olino, dein kleiner Koch">
+<meta property="og:description" content="Rezepte fotografieren, planen, einkaufen und kochen.">
+<meta property="og:image" content="https://cookolino.ch/bilder/titel.png">
+<meta property="og:url" content="https://cookolino.ch/">
+<link rel="icon" href="bilder/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="bilder/apple-touch-icon.png">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<header class="kopf">
+  <div class="rahmen kopf-innen">
+    <a href="#" class="marke" aria-label="CookOlino Startseite">
+      <img src="bilder/logo.svg" alt="" width="40" height="40">
+      <span>Cook<b>Olino</b></span>
+    </a>
+    <nav class="menue" aria-label="Hauptmenü">
+      <a href="#funktionen">Funktionen</a>
+      <a href="#zusammen">Zusammen kochen</a>
+      <a href="#daten">Deine Daten</a>
+      <a href="#fragen">Fragen</a>
+    </nav>
+    <a href="#mitmachen" class="knopf knopf-klein">Mitmachen</a>
+  </div>
+</header>
+
+<main>
+
+<!-- Einstieg -->
+<section class="held">
+  <div class="rahmen held-innen">
+    <div class="held-text">
+      <p class="marke-zeile"><span class="punkt"></span> Jetzt im Test auf Android</p>
+      <h1>Deine Rezepte.<br><span class="akzent">Einfach gekocht.</span></h1>
+      <p class="einleitung">Fotografiere eine Kochbuchseite oder teile einen Link – Olino macht daraus ein sauberes Rezept mit Zutaten, Schritten und Nährwerten. Dann planen, einkaufen und Schritt für Schritt kochen.</p>
+      <div class="knoepfe">
+        <a href="#mitmachen" class="knopf">Als Tester mitmachen</a>
+        <a href="#funktionen" class="knopf knopf-hell">Mehr erfahren</a>
+      </div>
+      <ul class="vorteile">
+        <li>Keine Werbung</li>
+        <li>Kein Tracking</li>
+        <li>Kein Konto nötig</li>
+      </ul>
+    </div>
+    <div class="held-bild">
+      <div class="handy handy-gross">
+        <img src="bilder/app-01.jpg" alt="CookOlino: Rezeptliste mit Fotos, Kochzeit und Nährwerten" width="550" height="1100">
+      </div>
+      <img src="bilder/logo.svg" alt="" class="olino-schwebt" width="120" height="120">
+    </div>
+  </div>
+  <svg class="welle" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,80 L0,80 Z"/></svg>
+</section>
+
+<!-- Funktionen -->
+<section id="funktionen" class="abschnitt">
+  <div class="rahmen">
+    <p class="ueber">Alles an einem Ort</p>
+    <h2>Vom Kochbuch auf den Teller</h2>
+    <div class="karten">
+      <article class="karte erscheint">
+        <div class="symbol"><svg viewBox="0 0 24 24"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <h3>Foto genügt</h3>
+        <p>Kochbuchseite fotografieren – Titel, Zutaten und Zubereitung werden erkannt und übersichtlich geordnet.</p>
+      </article>
+      <article class="karte erscheint">
+        <div class="symbol"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></div>
+        <h3>Rezepte aus dem Web</h3>
+        <p>Link einfügen oder im Browser teilen. Die Originalseite bleibt mit einem Tipp auf «Quelle» erreichbar.</p>
+      </article>
+      <article class="karte erscheint">
+        <div class="symbol"><svg viewBox="0 0 24 24"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10z"/></svg></div>
+        <h3>Nährwerte inklusive</h3>
+        <p>Kalorien, Protein, Kohlenhydrate und Fett pro Person – geschätzt für jedes Rezept.</p>
+      </article>
+      <article class="karte erscheint">
+        <div class="symbol"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <h3>Wochenplan</h3>
+        <p>Gerichte für die Woche auswählen und mit «Was koche ich heute?» Ideen aus dem Kühlschrank holen.</p>
+      </article>
+      <article class="karte erscheint">
+        <div class="symbol"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h11L21 7H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg></div>
+        <h3>Einkaufen mit Bring!</h3>
+        <p>Zutaten direkt in deine Bring!-Liste – gleiche Zutaten werden zusammengezählt.</p>
+      </article>
+      <article class="karte erscheint">
+        <div class="symbol"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+        <h3>Unverträglichkeiten</h3>
+        <p>Sag, was du nicht isst. Olino weist darauf hin, schlägt Ersatz vor und macht auf Wunsch eine eigene Variante.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Rezept im Detail -->
+<section class="abschnitt abschnitt-zart">
+  <div class="rahmen zeige">
+    <div class="zeige-bild erscheint">
+      <div class="handy"><img src="bilder/app-02.jpg" alt="Rezeptansicht mit Foto, Nährwerten und Zutaten nach Gruppen" width="550" height="1100" loading="lazy"></div>
+    </div>
+    <div class="zeige-text erscheint">
+      <p class="ueber">Übersichtlich</p>
+      <h2>Jedes Rezept sauber aufgeräumt</h2>
+      <p>Zutaten nach Gruppen geordnet, Portionen per Knopfdruck umgerechnet, Backtemperatur passend für Umluft oder Ober-/Unterhitze. Lass ein Rezept anpassen – zum Beispiel «vegetarisch» oder «für 2 Personen» – und mach es bei Bedarf rückgängig.</p>
+      <ul class="haken">
+        <li>Portionen umrechnen</li>
+        <li>Rezepte anpassen lassen</li>
+        <li>Kochtagebuch mit Sternen, Notiz und eigenem Foto</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Zusammen kochen -->
+<section id="zusammen" class="abschnitt">
+  <div class="rahmen zeige zeige-gedreht">
+    <div class="zeige-bild erscheint">
+      <div class="handy"><img src="bilder/app-03.jpg" alt="Gemeinsamer Ablauf für zwei Gerichte mit Zeitleiste und Geräten" width="550" height="1100" loading="lazy"></div>
+    </div>
+    <div class="zeige-text erscheint">
+      <p class="ueber">Das Besondere</p>
+      <h2>Zwei Gerichte, ein Plan, alles gleichzeitig fertig</h2>
+      <p>Wähle zwei oder drei Gerichte – Olino plant einen gemeinsamen Ablauf. Wartezeiten werden genutzt, gleiche Arbeiten zusammengelegt, Ofen und Kochfelder ohne Konflikte eingeplant.</p>
+      <ul class="haken">
+        <li>Zeitleiste mit allen Schritten</li>
+        <li>«Essen um …» berechnet die Startzeit</li>
+        <li>Timer mit Namen wie «Kartoffeln vorkochen»</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Kochmodus -->
+<section class="abschnitt abschnitt-zart">
+  <div class="rahmen zeige">
+    <div class="zeige-bild erscheint">
+      <div class="handy"><img src="bilder/app-04.jpg" alt="Kochmodus mit grosser Schrift, Timer und Weiter-Knopf" width="550" height="1100" loading="lazy"></div>
+    </div>
+    <div class="zeige-text erscheint">
+      <p class="ueber">Hände voll? Kein Problem</p>
+      <h2>Kochmodus mit Stimme</h2>
+      <p>Schritt für Schritt in grosser Schrift. Auf Wunsch liest Olino jeden Schritt vor und hört auf «weiter», «zurück» oder «Schritt 3». Timer startest du direkt aus dem Text.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Daten -->
+<section id="daten" class="abschnitt band">
+  <div class="rahmen band-innen erscheint">
+    <img src="bilder/logo.svg" alt="" width="96" height="96" class="band-olino">
+    <div>
+      <h2>Deine Daten bleiben bei dir</h2>
+      <p>Rezepte liegen auf deinem Handy. Das Backup landet in einem sichtbaren Ordner «Cookolino» in deinem eigenen Google Drive – oder in einem Ordner deiner Wahl. Es gibt keinen Server des Entwicklers, kein Konto, keine Werbung und kein Tracking.</p>
+      <a href="datenschutz.html" class="pfeil-link">Zur Datenschutzerklärung</a>
+    </div>
+  </div>
+</section>
+
+<!-- Fragen -->
+<section id="fragen" class="abschnitt">
+  <div class="rahmen schmal">
+    <p class="ueber">Gut zu wissen</p>
+    <h2>Häufige Fragen</h2>
+    <details>
+      <summary>Was kostet CookOlino?</summary>
+      <p>Während der Testphase ist CookOlino kostenlos.</p>
+    </details>
+    <details>
+      <summary>Gibt es CookOlino für iPhone?</summary>
+      <p>Im Moment gibt es CookOlino nur für Android.</p>
+    </details>
+    <details>
+      <summary>Wie erkennt CookOlino die Rezepte?</summary>
+      <p>Für das Einlesen und Anpassen nutzt CookOlino die KI Claude von Anthropic. Dabei wird nur das Foto oder der Rezepttext übermittelt, keine Namen oder Kontodaten.</p>
+    </details>
+    <details>
+      <summary>Was passiert mit meinen Rezepten, wenn ich das Handy wechsle?</summary>
+      <p>Mit dem Backup in Google Drive installierst du CookOlino auf dem neuen Handy, meldest dich an – und deine Rezepte samt Einstellungen sind wieder da.</p>
+    </details>
+    <details>
+      <summary>Kann ich Rezepte mit anderen teilen?</summary>
+      <p>Ja. Du sendest ein Rezept als Datei an andere CookOlino-Nutzer oder als lesbaren Text an alle anderen – zum Beispiel per WhatsApp oder Mail.</p>
+    </details>
+    <details>
+      <summary>Wie lösche ich meine Daten?</summary>
+      <p>In den Einstellungen der App entfernt «Alle Daten löschen» Rezepte, Backup und Google-Freigabe mit einem Knopf. <a href="datenschutz.html#loeschen">Mehr dazu</a></p>
+    </details>
+  </div>
+</section>
+
+<!-- Mitmachen -->
+<section id="mitmachen" class="abschnitt schluss">
+  <div class="rahmen schluss-innen erscheint">
+    <img src="bilder/logo.svg" alt="" width="88" height="88">
+    <h2>Lust, mitzutesten?</h2>
+    <p>CookOlino ist im Test auf Android. Schreib eine kurze Mail mit der Google-Adresse deines Handys – du bekommst den Link zum Test.</p>
+    <a href="mailto:thomasaggeler@gmail.com?subject=CookOlino%20testen" class="knopf knopf-gelb">Mail schreiben</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="fuss">
+  <div class="rahmen fuss-innen">
+    <div class="marke marke-fuss"><img src="bilder/logo.svg" alt="" width="32" height="32"><span>Cook<b>Olino</b></span></div>
+    <nav aria-label="Rechtliches">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="mailto:thomasaggeler@gmail.com">Kontakt</a>
+    </nav>
+    <p>© 2026 Thomas Aggeler · Mit Liebe in der Schweiz gekocht</p>
+  </div>
+</footer>
+
+<script>
+  // Karten und Bilder sanft einblenden, sobald sie ins Bild kommen
+  const beobachter = new IntersectionObserver((eintraege) => {
+    eintraege.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('sichtbar'); beobachter.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.erscheint').forEach((el) => beobachter.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* CookOlino – Farben aus dem App-Logo */
+:root {
+  --petrol: #1F5F66;
+  --petrol-dunkel: #174A50;
+  --petrol-hell: #E6F0F0;
+  --gelb: #F2B544;
+  --koralle: #C9553A;
+  --creme: #FFFAF3;
+  --text: #1E2A2B;
+  --text-leise: #56676A;
+  --karte: #FFFFFF;
+  --linie: #E8E1D6;
+  --rund: 22px;
+  --schatten: 0 10px 30px rgba(23, 74, 80, .10);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: var(--creme);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--petrol); }
+h1, h2, h3 { line-height: 1.15; letter-spacing: -.02em; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 800; }
+h3 { font-size: 1.15rem; }
+
+.rahmen { width: min(1140px, 100% - 32px); margin-inline: auto; }
+.schmal { width: min(760px, 100% - 32px); }
+
+/* Knöpfe */
+.knopf {
+  display: inline-block; padding: 14px 26px; border-radius: 999px;
+  background: var(--koralle); color: #fff; font-weight: 700; text-decoration: none;
+  box-shadow: 0 6px 18px rgba(201, 85, 58, .30);
+  transition: transform .2s, box-shadow .2s;
+}
+.knopf:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201, 85, 58, .38); }
+.knopf-hell { background: rgba(255, 255, 255, .14); box-shadow: none; border: 1.5px solid rgba(255, 255, 255, .45); }
+.knopf-hell:hover { background: rgba(255, 255, 255, .24); box-shadow: none; }
+.knopf-gelb { background: var(--gelb); color: var(--petrol-dunkel); box-shadow: 0 6px 18px rgba(242, 181, 68, .35); }
+.knopf-klein { padding: 9px 18px; font-size: .95rem; }
+
+/* Kopfzeile */
+.kopf {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255, 250, 243, .85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--linie);
+}
+.kopf-innen { display: flex; align-items: center; gap: 24px; height: 68px; }
+.marke { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--petrol-dunkel); font-size: 1.35rem; font-weight: 700; }
+.marke b { color: var(--gelb); }
+.marke img { border-radius: 10px; }
+.menue { display: flex; gap: 26px; margin-left: auto; }
+.menue a { color: var(--text); text-decoration: none; font-weight: 500; }
+.menue a:hover { color: var(--koralle); }
+
+/* Einstieg */
+.held {
+  position: relative; color: #fff; overflow: hidden;
+  background: radial-gradient(circle at 80% 20%, #2A7A82 0, transparent 50%), linear-gradient(135deg, #246C74, var(--petrol-dunkel));
+  padding: 72px 0 120px;
+}
+.held-innen { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.marke-zeile { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(255, 255, 255, .12); font-size: .9rem; font-weight: 600; margin: 0 0 22px; }
+.punkt { width: 8px; height: 8px; border-radius: 50%; background: var(--gelb); box-shadow: 0 0 0 4px rgba(242, 181, 68, .3); animation: puls 2s infinite; }
+.akzent { color: var(--gelb); }
+.einleitung { font-size: 1.15rem; opacity: .92; max-width: 34em; margin: 0 0 30px; }
+.knoepfe { display: flex; flex-wrap: wrap; gap: 14px; }
+.vorteile { display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; padding: 0; margin: 30px 0 0; font-size: .95rem; opacity: .9; }
+.vorteile li::before { content: "✓"; color: var(--gelb); font-weight: 800; margin-right: 7px; }
+.held-bild { position: relative; display: flex; justify-content: center; }
+.olino-schwebt { position: absolute; left: 2%; bottom: 8%; width: 120px; border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, .3); animation: schweben 5s ease-in-out infinite; }
+.welle { position: absolute; bottom: -1px; left: 0; width: 100%; height: 80px; fill: var(--creme); }
+
+/* Handy-Rahmen */
+.handy {
+  width: min(300px, 80vw); padding: 10px; border-radius: 42px; background: #111;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .25), inset 0 0 0 2px #333;
+}
+.handy img { border-radius: 32px; width: 100%; }
+.handy-gross { width: min(320px, 78vw); transform: rotate(3deg); }
+
+/* Abschnitte */
+.abschnitt { padding: 96px 0; }
+.abschnitt-zart { background: var(--petrol-hell); }
+.ueber { color: var(--koralle); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; margin: 0 0 10px; }
+#funktionen h2, #fragen h2 { margin-bottom: 40px; }
+
+.karten { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.karte { background: var(--karte); border: 1px solid var(--linie); border-radius: var(--rund); padding: 28px; transition: transform .25s, box-shadow .25s; }
+.karte:hover { transform: translateY(-4px); box-shadow: var(--schatten); }
+.karte p { color: var(--text-leise); margin: 0; }
+.symbol { width: 48px; height: 48px; border-radius: 14px; background: var(--petrol-hell); display: grid; place-items: center; margin-bottom: 16px; }
+.symbol svg { width: 26px; height: 26px; fill: none; stroke: var(--petrol); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.zeige { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.zeige-gedreht .zeige-bild { order: 2; }
+.zeige-bild { display: flex; justify-content: center; }
+.zeige-text p { color: var(--text-leise); font-size: 1.08rem; }
+.haken { list-style: none; padding: 0; margin: 20px 0 0; }
+.haken li { padding: 6px 0 6px 34px; position: relative; font-weight: 500; }
+.haken li::before { content: ""; position: absolute; left: 0; top: 9px; width: 22px; height: 22px; border-radius: 50%; background: var(--gelb) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12l4 4 8-8' fill='none' stroke='%23174A50' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+
+/* Daten-Band */
+.band { background: var(--petrol); color: #fff; }
+.band-innen { display: flex; gap: 40px; align-items: center; }
+.band-olino { flex: none; border-radius: 26px; box-shadow: 0 0 0 6px rgba(255, 255, 255, .12); }
+.band p { opacity: .92; font-size: 1.08rem; max-width: 46em; }
+.pfeil-link { color: var(--gelb); font-weight: 700; text-decoration: none; }
+.pfeil-link::after { content: " →"; }
+
+/* Fragen */
+details { background: var(--karte); border: 1px solid var(--linie); border-radius: 16px; padding: 4px 22px; margin-bottom: 12px; }
+summary { cursor: pointer; font-weight: 600; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--koralle); transition: transform .2s; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { color: var(--text-leise); margin: 0 0 18px; }
+
+/* Schluss */
+.schluss { background: linear-gradient(135deg, #246C74, var(--petrol-dunkel)); color: #fff; text-align: center; }
+.schluss-innen { display: flex; flex-direction: column; align-items: center; }
+.schluss-innen img { border-radius: 24px; margin-bottom: 20px; animation: schweben 5s ease-in-out infinite; }
+.schluss p { opacity: .92; max-width: 34em; margin: 0 0 28px; font-size: 1.08rem; }
+
+/* Fuss */
+.fuss { background: var(--petrol-dunkel); color: rgba(255, 255, 255, .75); padding: 36px 0; font-size: .92rem; }
+.fuss-innen { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; }
+.fuss nav { display: flex; gap: 22px; }
+.fuss a { color: #fff; text-decoration: none; }
+.fuss a:hover { color: var(--gelb); }
+.fuss p { margin: 0 0 0 auto; }
+.marke-fuss { color: #fff; font-size: 1.15rem; }
+
+/* Bewegung */
+.erscheint { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.erscheint.sichtbar { opacity: 1; transform: none; }
+.karten .karte:nth-child(2) { transition-delay: .08s; }
+.karten .karte:nth-child(3) { transition-delay: .16s; }
+.karten .karte:nth-child(5) { transition-delay: .08s; }
+.karten .karte:nth-child(6) { transition-delay: .16s; }
+@keyframes schweben { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+@keyframes puls { 0%, 100% { box-shadow: 0 0 0 4px rgba(242, 181, 68, .3); } 50% { box-shadow: 0 0 0 8px rgba(242, 181, 68, 0); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .erscheint { opacity: 1; transform: none; }
+}
+
+/* Tablet und Handy */
+@media (max-width: 900px) {
+  .menue { display: none; }
+  .kopf-innen .knopf { margin-left: auto; }
+  .held { padding: 48px 0 100px; }
+  .held-innen, .zeige { grid-template-columns: 1fr; gap: 48px; }
+  .zeige-gedreht .zeige-bild { order: 0; }
+  .karten { grid-template-columns: 1fr 1fr; }
+  .band-innen { flex-direction: column; text-align: center; }
+  .band p { margin-inline: auto; }
+  .abschnitt { padding: 72px 0; }
+}
+@media (max-width: 600px) {
+  .karten { grid-template-columns: 1fr; }
+  .olino-schwebt { width: 84px; border-radius: 20px; }
+  .fuss p { margin: 0; }
+}
