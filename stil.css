@@ -190,6 +190,17 @@ details p { color: var(--text-leise); margin: 0 0 18px; }
 .ablauf-liste li.fertig .ablauf-zeit, .ablauf-liste li.fertig .ablauf-zeit b { color: #fff; }
 .ablauf-liste li.fertig .ablauf-text { flex-direction: row; align-items: center; gap: 10px; }
 
+/* Anleitungsvideos */
+.anleitungen-einleitung { color: var(--text-leise); max-width: 40em; margin: -16px 0 40px; }
+.anleitungen { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 40px 28px; }
+.anleitung { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.anleitung h3 { margin: 18px 0 6px; }
+.anleitung p { color: var(--text-leise); margin: 0; font-size: .95rem; max-width: 22em; }
+.handy-klein { width: 220px; border-radius: 34px; padding: 8px; }
+.handy video { display: block; width: 100%; aspect-ratio: 720 / 1450; border-radius: 26px; background: #f3eee6; object-fit: cover; }
+.anleitungen .anleitung:nth-child(3n+2) { transition-delay: .08s; }
+.anleitungen .anleitung:nth-child(3n) { transition-delay: .16s; }
+
 /* Bewegung */
 .erscheint { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .erscheint.sichtbar { opacity: 1; transform: none; }
@@ -219,6 +230,7 @@ details p { color: var(--text-leise); margin: 0 0 18px; }
 }
 @media (max-width: 600px) {
   .karten { grid-template-columns: 1fr; }
+  .anleitungen { grid-template-columns: 1fr; }
   .olino-schwebt { width: 84px; border-radius: 20px; }
   .fuss p { margin: 0; }
   .ablauf { padding: 20px; }
