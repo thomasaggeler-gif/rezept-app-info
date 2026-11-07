@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://cookolino.ch/">
 <link rel="icon" href="bilder/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="bilder/apple-touch-icon.png">
-<link rel="stylesheet" href="stil.css?v=20261105b">
+<link rel="stylesheet" href="stil.css?v=20261107a">
 </head>
 <body>
 
@@ -25,6 +25,7 @@
     <nav class="menue" aria-label="Hauptmenü">
       <a href="#funktionen">Funktionen</a>
       <a href="#zusammen">Zusammen kochen</a>
+      <a href="#kueche">Deine Küche</a>
       <a href="#anleitungen">So geht's</a>
       <a href="#daten">Deine Daten</a>
       <a href="#fragen">Fragen</a>
@@ -144,7 +145,7 @@
       <li class="erscheint">
         <span class="nummer">2</span>
         <h3>Olino plant den Ablauf</h3>
-        <p>Alle Schritte werden zu einem einzigen Ablauf zusammengeführt – passend zu deinem Ofen und deinen Kochfeldern.</p>
+        <p>Alle Schritte werden zu einem einzigen Ablauf zusammengeführt – passend zu <a href="#kueche">deiner Küche</a> mit Ofen, Kochfeldern und weiteren Geräten.</p>
       </li>
       <li class="erscheint">
         <span class="nummer">3</span>
@@ -189,17 +190,67 @@
   </div>
 </section>
 
-<!-- Kochmodus -->
-<section class="abschnitt abschnitt-zart">
-  <div class="rahmen zeige">
-    <div class="zeige-bild erscheint">
-      <div class="handy"><img src="bilder/app-04.jpg" alt="Kochmodus mit grosser Schrift, Timer und Weiter-Knopf" width="550" height="1100" loading="lazy"></div>
+<!-- Deine Küche -->
+<section id="kueche" class="abschnitt abschnitt-zart">
+  <div class="rahmen">
+    <div class="zeige">
+      <div class="zeige-bild erscheint">
+        <div class="kuechen-mock" aria-label="Beispiel: Küchenwahl vor dem Kochen wie in der App">
+          <p class="kuechen-frage">Wo kochst du heute?</p>
+          <div class="kueche-wahl gewaehlt">
+            <span class="kueche-kopf"><span class="kueche-radio" aria-hidden="true"></span><b>Zuhause</b></span>
+            <span class="kueche-geraete"><span>Backofen (Umluft)</span><span>4 Kochfelder</span><span>Thermomix</span><span>Steamer</span></span>
+          </div>
+          <div class="kueche-wahl">
+            <span class="kueche-kopf"><span class="kueche-radio" aria-hidden="true"></span><b>Ferienwohnung</b></span>
+            <span class="kueche-geraete"><span>Backofen</span><span>2 Kochfelder</span><span>Mikrowelle</span></span>
+          </div>
+          <div class="kueche-wahl">
+            <span class="kueche-kopf"><span class="kueche-radio" aria-hidden="true"></span><b>Wohnwagen</b></span>
+            <span class="kueche-geraete"><span>2 Kochfelder</span><span>Grill</span></span>
+          </div>
+          <p class="kuechen-fuss">Olino plant nur mit den Geräten der gewählten Küche.</p>
+        </div>
+      </div>
+      <div class="zeige-text erscheint">
+        <p class="ueber">Deine Küche, dein Plan</p>
+        <h2>Olino kennt deine Küche</h2>
+        <p>Stell einmal ein, was in deiner Küche steht: Backofen mit oder ohne Umluft, wie viele Kochfelder, dazu Geräte wie Thermomix, Steamer, Mikrowelle, Heissluftfritteuse oder Sous-vide. Jeder Ablauf wird genau für diese Küche geplant.</p>
+        <ul class="vorzuege">
+          <li><b>Nie zu viel auf einmal</b><span>Olino belegt nie mehr Kochfelder oder Öfen, als du hast.</span></li>
+          <li><b>Ein Ofen, zwei Temperaturen?</b><span>Olino backt nacheinander oder wählt eine gemeinsame Temperatur mit angepasster Zeit – und sagt dir, warum.</span></li>
+          <li><b>Geräte, die entlasten</b><span>Gemüse im Steamer statt im Topf, Butter in der Mikrowelle schmelzen – so wird der Herd frei.</span></li>
+          <li><b>Umluft oder Ober-/Unterhitze</b><span>Die Ofenangaben im Rezept richten sich nach deiner Einstellung.</span></li>
+          <li><b>Mehrere Küchen mit eigenem Namen</b><span>Zuhause, Ferienwohnung, Wohnwagen: Vor dem Kochen wählst du, wo du kochst.</span></li>
+        </ul>
+      </div>
     </div>
-    <div class="zeige-text erscheint">
-      <p class="ueber">Hände voll? Kein Problem</p>
-      <h2>Kochmodus mit Stimme</h2>
-      <p>Schritt für Schritt in grosser Schrift. Auf Wunsch liest Olino jeden Schritt vor und hört auf «weiter», «zurück» oder «Schritt 3». Timer startest du direkt aus dem Text.</p>
-    </div>
+
+    <figure class="vergleich erscheint" aria-label="Beispiel: gleiches Menü in zwei verschiedenen Küchen">
+      <figcaption>Gleiches Menü, andere Küche</figcaption>
+      <p class="vergleich-menue">Rahmschnitzel, Salzkartoffeln und Rüebli – Essen um <b>19:00</b></p>
+      <div class="vergleich-spalten">
+        <div class="vergleich-spalte">
+          <h3>Zuhause</h3>
+          <p class="vergleich-geraete">4 Kochfelder · Steamer</p>
+          <ul>
+            <li>Kartoffeln, Sauce und Fleisch gleichzeitig auf dem Herd</li>
+            <li>Rüebli im Steamer – kein Topf nötig</li>
+          </ul>
+          <p class="vergleich-start">Start um <b>18:25</b></p>
+        </div>
+        <div class="vergleich-spalte">
+          <h3>Ferienwohnung</h3>
+          <p class="vergleich-geraete">2 Kochfelder</p>
+          <ul>
+            <li>Kartoffeln und Rüebli zuerst, dann warm halten</li>
+            <li>Fleisch und Sauce danach in derselben Pfanne</li>
+          </ul>
+          <p class="vergleich-start">Start um <b>18:10</b></p>
+        </div>
+      </div>
+      <p class="vergleich-hinweis">Olino rechnet aus, wann du anfangen musst – passend zu den Geräten, die wirklich da sind.</p>
+    </figure>
   </div>
 </section>
 

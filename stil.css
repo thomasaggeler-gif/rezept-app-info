@@ -242,3 +242,31 @@ details p { color: var(--text-leise); margin: 0 0 18px; }
   .fuss p { margin: 0; }
   .ablauf { padding: 20px; }
 }
+
+/* Deine Küche */
+.kuechen-mock { width: min(360px, 100%); background: #fff; border: 1px solid var(--linie); border-radius: 28px; padding: 22px; box-shadow: var(--schatten); display: grid; gap: 12px; }
+.kuechen-frage { margin: 0 0 4px; font-weight: 800; font-size: 1.15rem; color: var(--petrol-dunkel); }
+.kueche-wahl { border: 1.5px solid var(--linie); border-radius: 16px; padding: 12px 14px; display: grid; gap: 8px; }
+.kueche-wahl.gewaehlt { border-color: var(--petrol); background: var(--petrol-hell); }
+.kueche-kopf { display: flex; align-items: center; gap: 10px; }
+.kueche-radio { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #9AABAD; flex: none; }
+.gewaehlt .kueche-radio { border-color: var(--petrol); background: radial-gradient(circle, var(--petrol) 0 4px, transparent 5px); }
+.kueche-geraete { display: flex; flex-wrap: wrap; gap: 6px; padding-left: 28px; }
+.kueche-geraete span { font-size: .8rem; padding: 3px 10px; border-radius: 999px; background: #F3EEE6; color: var(--text-leise); }
+.gewaehlt .kueche-geraete span { background: #fff; color: var(--petrol-dunkel); }
+.kuechen-fuss { margin: 4px 0 0; font-size: .85rem; color: var(--text-leise); }
+.vergleich { margin: 64px auto 0; max-width: 820px; background: var(--karte); border: 1px solid var(--linie); border-radius: var(--rund); padding: 28px; box-shadow: var(--schatten); }
+.vergleich figcaption { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--koralle); margin-bottom: 8px; }
+.vergleich-menue { margin: 0 0 20px; color: var(--text-leise); }
+.vergleich-spalten { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.vergleich-spalte { border: 1px solid var(--linie); border-radius: 16px; padding: 18px; background: #fff; display: flex; flex-direction: column; }
+.vergleich-spalte h3 { margin: 0; }
+.vergleich-geraete { margin: 2px 0 12px; font-size: .9rem; color: var(--text-leise); }
+.vergleich-spalte ul { margin: 0 0 14px; padding-left: 18px; flex: 1; }
+.vergleich-spalte li { margin-bottom: 6px; }
+.vergleich-start { margin: 0; padding: 8px 12px; border-radius: 12px; background: var(--petrol-hell); color: var(--petrol-dunkel); }
+.vergleich-hinweis { margin: 18px 0 0; font-size: .95rem; color: var(--text-leise); }
+@media (max-width: 600px) {
+  .vergleich { padding: 20px; margin-top: 48px; }
+  .vergleich-spalten { grid-template-columns: 1fr; }
+}
