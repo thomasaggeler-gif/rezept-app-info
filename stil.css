@@ -270,3 +270,7 @@ details p { color: var(--text-leise); margin: 0 0 18px; }
   .vergleich { padding: 20px; margin-top: 48px; }
   .vergleich-spalten { grid-template-columns: 1fr; }
 }
+.gericht-b { background: #DCE7F3; color: #22466E; }
+.gericht-v { background: #EEE0F4; color: #5E2F73; }
+.p.b { background: #3A6EA5; }
+.p.v { background: #9A5BB5; }
